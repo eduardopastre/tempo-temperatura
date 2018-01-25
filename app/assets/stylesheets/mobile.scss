@@ -1,0 +1,9 @@
+
+@media #{$small-and-down} {
+  header {
+    height: 75px;
+    .logo {
+      padding: 0px 22% 0px 22% !important;
+    }
+  }
+}
