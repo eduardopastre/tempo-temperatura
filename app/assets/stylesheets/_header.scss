@@ -33,5 +33,24 @@ header {
       top: 10px;
       right: 10px;
     }
+
+    #search-results {
+      background-color: #fafafa;
+      margin: 0;
+      border-radius: 0;
+      a {
+        text-decoration: none;
+        display: block;
+        color: #464a4e;
+        font-size: 1em;
+        padding: 0 30px 0 22px;
+        line-height: 36px;
+      }
+
+      a:hover {
+        background-color: #eee;
+        outline: none;
+      }
+    }
   }
 }

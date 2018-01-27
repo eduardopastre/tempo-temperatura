@@ -4,16 +4,16 @@ $('document').ready ->
     statesCities = data
   )
   
-  $('#search').keyup ->
-    if $('#search').val().trim().length >= 3
+  $('#search-city').keyup ->
+    if $('#search-city').val().trim().length >= 3
       if statesCities == null || statesCities.length == 0
         loadStatesCities((data)->
-          cidade = searchCities(data, $('#search').val())
-          console.log(cidade)
+          cities = searchCities(data, $('#search-city').val())
+          appendCities($("#search-results"), cities)
         )
       else
-        cidade = searchCities(statesCities, $('#search').val())
-        console.log(cidade)
+        cities = searchCities(statesCities, $('#search-city').val())
+        appendCities($("#search-results"), cities)
     
 # ---------------------------- functions -------------------------------#
 
@@ -37,3 +37,9 @@ searchCities = (statesCities, filter)->
     )
   )
   cities
+
+appendCities = (element, cities)->
+  element.empty()
+  $.each(cities, (key, val)->
+    element.append("<a href='http://localhost:3000'>"+val+"</a>")
+  )
