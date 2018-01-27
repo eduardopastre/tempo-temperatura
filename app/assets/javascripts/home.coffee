@@ -5,15 +5,24 @@ $('document').ready ->
   )
   
   $('#search-city').keyup ->
-    if $('#search-city').val().trim().length >= 3
+    searchVal = $('#search-city').val()
+    if searchVal.trim().length >= 3
       if statesCities == null || statesCities.length == 0
         loadStatesCities((data)->
-          cities = searchCities(data, $('#search-city').val())
+          cities = searchCities(data, searchVal)
           appendCities($("#search-results"), cities)
         )
       else
-        cities = searchCities(statesCities, $('#search-city').val())
+        cities = searchCities(statesCities, searchVal)
         appendCities($("#search-results"), cities)
+    else if searchVal == ""
+      $("#search-results").empty()
+
+  $('#search-city').blur ->
+    $("#search-results").empty()
+
+  $('#search-city').focus ->
+
     
 # ---------------------------- functions -------------------------------#
 

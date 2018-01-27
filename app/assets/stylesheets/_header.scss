@@ -13,36 +13,55 @@ header {
 
   .search-wrapper {
     margin: 0;
-    position: absolute;
-    top: 40px;
+    position: relative;
+    top: 44px;
+
+    input:focus {  
+      border-bottom: 1px solid #176496 !important;
+      box-shadow: none !important;
+      width: 220px;
+    }
+
+    input:focus + #search-results {
+      width: 282px;
+    }
     
-    input {  
+    input {
       display: block;
       margin: 0;
       background-color: #1c74ae;
       border: 1px solid #176496;
-      height: 36px;
+      height: 32px;
       font-size: 1.1em;
-      padding: 0 45px 0 15px;
-      
-      width: 165px;
+      padding: 0 45px 0 15px;      
+      width: 167px;
+      position: absolute;
+      right: 0;
     }
 
     i.material-icons {
       position: absolute;
-      top: 10px;
+      top: 6px;
       right: 10px;
+      z-index: 2;
     }
 
     #search-results {
       background-color: #fafafa;
       margin: 0;
       border-radius: 0;
+      width: 228px;
+      max-height: 300px;
+      overflow-y: auto;
+      position: absolute;
+      right: 0;
+      top: 34px;
+
       a {
         text-decoration: none;
         display: block;
         color: #464a4e;
-        font-size: 1em;
+        font-size: 0.9em;
         padding: 0 30px 0 22px;
         line-height: 36px;
       }
