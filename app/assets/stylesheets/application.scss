@@ -3,3 +3,18 @@
 @import "material_icons";
 @import "header";
 @import "mobile";
+
+main {
+  min-height: 400px;
+}
+
+footer {
+  height: 74px;
+  background-color: #2a94d9;
+
+  p {
+    margin: 0 auto;
+    color: #fff;
+    font-size: 0.9em;
+  }
+}
