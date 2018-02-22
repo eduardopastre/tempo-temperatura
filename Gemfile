@@ -20,6 +20,8 @@ gem 'rest-client'
 gem 'materialize-sass'
 gem 'material_icons'
 
+gem 'httparty'
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.5'
