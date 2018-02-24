@@ -1,31 +1,88 @@
-<div id='forecast_today' class='row'>
-  <div class='col l5 m8 s12'>
-    <div class='row resume'>
-      <div class='col s4'>
-        <%= image_tag 'realistc/128px/2.png' %>
+<div id='forecast-today' class='row'>
+  <div class='col l6 m12 s12'>
+    <div class='col l10 m7 s12'>
+      <div class='row resume'>
+        <div class='col s4'>
+          <%= image_tag 'realistic/128px/2.png' %>
+        </div>
+        <div class='col s4 degrees'>
+          <p>34º</p>
+        </div>
+        <div class='col s4 max-min'>
+          <p>MÁX: 36º</p>
+          <p>MÍN: 28º</p>
+        </div>
+        <div class='col s12 description'>
+          <p>Dia de sol com algumas nuvens e névoa ao amanhecer. Noite com poucas nuvens.</p>
+        </div>
       </div>
-      <div class='col S4 degrees'>
-        <p>34º</p>
-      </div>
-      <div class='col s4 max_min'>
-        <p>MÁX: 36º</p>
-        <p>MÍN: 28º</p>
-      </div>
-      <div class='col s12 description'>
-        <p>Dia de sol com algumas nuvens e névoa ao amanhecer. Noite com poucas nuvens.</p>
+    </div>
+
+    <div class='col l2 m5 s12 basic-info'>
+      <div class='row'>
+        <div class='col l12 m4 s4'>
+          <p><b>chuva</b></p>
+          <p>2mm</p>
+        </div>
+        <div class='col l12 m4 s4 top-block'>
+          <p><b>umidade</b></p>
+          <p>62%</p>
+        </div>
+        <div class='col l12 m4 s4 top-block'>
+          <p><b>sensação</b></p>
+          <p>38º</p>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class='col l2 m4 s12'>
-    <p>4</p>
-  </div>
+  <div class='col l6 m12 s12'>
+    <div class='col l10 m9 s12 variants'>
+      <div class='section'>
+        <div class='row'>
+          <p class='col s6'>Umidade do ar:</p>
+          <p class='col s6'>min 26% - max: 33%</p>
+        </div>
+      </div>
 
-  <div class='col l4 m9 s12'>
-    <p>5</p>
-  </div>
+      <div class="divider"></div>
+      <div class='section'>
+        <div class='row'>
+          <p class='col s6'>Chances de chuva:</p>
+          <p class='col s6'>21%</p>
+        </div>
+      </div>
 
-  <div class='col l1 m3 s12'>
-    <p>6</p>
+      <div class="divider"></div>
+      <div class='section'>
+        <div class='row'>
+          <p class='col s6'>Vento:</p>
+          <p class='col s6'>46 km/h - ESE</p>
+        </div>
+      </div> 
+
+      <div class="divider"></div>
+      <div class='section'>
+        <div class='row'>
+          <p class='col s6'> Senção térmica:</p>
+          <p class='col s6'>min 29º - máx: 38º</p>
+        </div>
+      </div>      
+    </div>
+
+    <div class='col l2 m3 s12 day-forecast'>
+      <div class='col l12 m12 s4'>
+        <%= image_tag 'realistic/45px/2.png' %>
+        <p>manhã</p>
+      </div>
+      <div class='col l12 m12 s4'>
+        <%= image_tag 'realistic/45px/2r.png' %>
+        <p>tarde</p>
+      </div>
+      <div class='col l12 m12 s4'>
+        <%= image_tag 'realistic/45px/4n.png' %>
+        <p>noite</p>
+      </div>
+    </div>
   </div>
 </div>

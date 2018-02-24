@@ -1,3 +1,11 @@
+@media #{$medium-and-down} {
+  div.basic-info {
+    margin-top: 1%;
+    .top-block {
+      margin-top: 0px !important;
+    }
+  }
+}
 
 @media #{$small-and-down} {
   header {
@@ -14,5 +22,4 @@
       font-size: 0.8em !important;
     }
   }
-
 }

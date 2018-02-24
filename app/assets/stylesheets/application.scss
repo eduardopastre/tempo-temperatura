@@ -1,14 +1,19 @@
-
+// colors_scheme should be imported first to share variables with all files 
+@import 'colors_scheme'; 
 @import "materialize";
 @import "material_icons";
 @import "header";
-@import "mobile";
 @import "forecast_locale";
 @import "forecast_today";
 @import "previsao";
+@import "mobile";
+
+html {
+  font-family: 'Source Sans Pro', sans-serif;
+}
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #fafafa;
 }
 
 main {
@@ -16,8 +21,8 @@ main {
 }
 
 footer {
-  height: 74px;
-  background-color: #2a94d9;
+  height: 54px;
+  background-color: $primary-color;
 
   p {
     margin: 0 auto;

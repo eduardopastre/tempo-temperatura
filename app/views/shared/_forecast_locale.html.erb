@@ -1,5 +1,11 @@
 <div id='forecast_locale'>
-  <h5>Previsão do tempo para</h5>
-  <%#= image_tag 'ic_geo.png' %>
-  <i class='medium material-icons'>place</i><p><%= city %> - <%= state %></p>
+  <div class='hide-on-small-and-down large'>
+    <h5>Previsão do tempo para</h5>
+    <i class='medium material-icons'>place</i>
+    <p><%= city %> - <%= state %></p>
+  </div>
+  <div class='hide-on-med-and-up small'>
+    <i class='medium material-icons'>place</i>
+    <h5>Previsão para <%= city %> - <%= state %></h5>
+  </div>
 </div>
