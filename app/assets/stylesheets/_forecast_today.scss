@@ -1,0 +1,39 @@
+#forecast_today {
+  p {
+    margin: 0;
+  }
+  div.resume {
+    img {
+      max-width: 72px;
+    }
+
+    .degrees {
+      p {
+        line-height: 66px;
+        font-size: 4.4em;
+        color: #616161;
+      }
+    }
+
+    .max_min {
+      text-align: center;
+      margin-top: 3%;
+      p {
+        font-size: 1.1em;
+        color: #424242;
+      }
+    }
+
+    .description {
+      margin-top: 10px;
+      p {
+        color: #757575;
+        font-size: 1.3em;
+        line-height: 22px;
+        @media #{$medium-and-up} {
+          padding-right: 50px;
+        }
+      }
+    }
+  }
+}

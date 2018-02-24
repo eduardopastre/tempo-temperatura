@@ -3,6 +3,13 @@
 @import "material_icons";
 @import "header";
 @import "mobile";
+@import "forecast_locale";
+@import "forecast_today";
+@import "previsao";
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
 
 main {
   min-height: 400px;

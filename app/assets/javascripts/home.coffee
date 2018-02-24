@@ -50,5 +50,8 @@ searchCities = (statesCities, filter)->
 appendCities = (element, cities)->
   element.empty()
   $.each(cities, (key, val)->
-    element.append("<a href='http://localhost:3000'>"+val+"</a>")
+    params = val.split('-')
+    link = "http://localhost:3000/previsao/cidade/"+params[1].trim()+"/"+params[0].trim()
+    console.log link
+    element.append("<a href='"+link+"'>"+val+"</a>")
   )
