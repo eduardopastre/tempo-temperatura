@@ -22,4 +22,14 @@
       font-size: 0.8em !important;
     }
   }
+
+  #forecast {
+    .today {
+      padding-top: 3%;
+    }
+
+    #more-details {
+      display: none;
+    }
+  }
 }

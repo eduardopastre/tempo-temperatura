@@ -1,6 +1,6 @@
 <div id='forecast' class='container'>
   <%= render partial: 'shared/forecast_locale', locals: {city: @city, state: @state} %>
   <div class="today">
-    <%= render partial: 'shared/forecast_today', locals: {city: @city} %>
+    <%= render partial: 'shared/forecast_today', locals: {city: @city, weather: PrevisaoHelper.weather_data(@weather)} %>
   </div>
 </div>

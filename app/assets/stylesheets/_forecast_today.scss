@@ -85,4 +85,16 @@
       margin-bottom: 10%;
     }
   }
+
+  .see-more-details {
+    text-align: center;
+    color: $primary-color;
+    font-size: 1.2em;
+    text-decoration: underline;
+    margin-bottom: 5px;
+    padding: 5px 0 5px 0;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+  }
 }

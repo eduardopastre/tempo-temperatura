@@ -3,17 +3,17 @@
     <div class='col l10 m7 s12'>
       <div class='row resume'>
         <div class='col s4'>
-          <%= image_tag 'realistic/128px/2.png' %>
+          <%= image_tag "realistic/128px/#{weather[:icon]}.png" %>
         </div>
         <div class='col s4 degrees'>
-          <p>34º</p>
+          <p><%= weather[:temperature] %>º</p>
         </div>
         <div class='col s4 max-min'>
           <p>MÁX: 36º</p>
           <p>MÍN: 28º</p>
         </div>
         <div class='col s12 description'>
-          <p>Dia de sol com algumas nuvens e névoa ao amanhecer. Noite com poucas nuvens.</p>
+          <p><%= weather[:condition] %></p>
         </div>
       </div>
     </div>
@@ -26,17 +26,17 @@
         </div>
         <div class='col l12 m4 s4 top-block'>
           <p><b>umidade</b></p>
-          <p>62%</p>
+          <p><%= weather[:humidity] %>%</p>
         </div>
         <div class='col l12 m4 s4 top-block'>
           <p><b>sensação</b></p>
-          <p>38º</p>
+          <p><%= weather[:sensation] %>º</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class='col l6 m12 s12'>
+  <div id='more-details' class='col l6 m12 s12'>
     <div class='col l10 m9 s12 variants'>
       <div class='section'>
         <div class='row'>
@@ -85,4 +85,6 @@
       </div>
     </div>
   </div>
+
+  <p class='hide-on-med-and-up see-more-details'>ver mais detalhes</p>
 </div>
