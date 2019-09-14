@@ -1,19 +1,15 @@
 FROM ruby:2.3-slim
-# Instala as nossas dependencias
+
 RUN apt-get update && apt-get install -qq -y --no-install-recommends \
       build-essential nodejs libpq-dev
-# Seta nosso path
-ENV INSTALL_PATH /usr/src/app
-# Cria nosso diretório
+
+ENV INSTALL_PATH /tempo_temperatura
 RUN mkdir -p $INSTALL_PATH
-# Seta o nosso path como o diretório principal
 WORKDIR $INSTALL_PATH
-# Copia o nosso Gemfile para dentro do container
+
+COPY Gemfile.lock /$INSTALL_PATH/Gemfile.lock
 COPY Gemfile ./
-# Instala as Gems
-RUN bundle install
-# Copia nosso código para dentro do container
-COPY . .
-# Roda nosso servidor
-CMD ["rails", "server", "-b", "0.0.0.0"]
-CMD puma -C config/puma.rb
+
+ENV BUNDLE_PATH /box
+
+COPY . /$INSTALL_PATH
