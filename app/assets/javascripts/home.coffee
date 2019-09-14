@@ -1,4 +1,4 @@
-$('document').ready ->
+$(document).on 'turbolinks:load', ->
   statesCities = []
   loadStatesCities((data)->
     statesCities = data
@@ -19,15 +19,17 @@ $('document').ready ->
       $("#search-results").empty()
 
   $('#search-city').blur ->
-    $("#search-results").empty()
+    #setTimeout -> 
+      #$("#search-results").empty()
+    #, 300
 
-  $('#search-city').focus ->
+  #$('#search-city').focus ->
 
     
 # ---------------------------- functions -------------------------------#
 
 loadStatesCities = (callback)->
-  $.getJSON('estados-cidades.json', (data)->
+  $.getJSON('/estados-cidades.json', (data)->
     callback(data)
   )
 
@@ -52,6 +54,5 @@ appendCities = (element, cities)->
   $.each(cities, (key, val)->
     params = val.split('-')
     link = "http://localhost:3000/previsao/cidade/"+params[1].trim()+"/"+params[0].trim()
-    console.log link
     element.append("<a href='"+link+"'>"+val+"</a>")
   )

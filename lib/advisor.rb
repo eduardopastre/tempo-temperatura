@@ -6,13 +6,22 @@ module Advisor
 
     def self.search_city_code city, state
       begin
-        response = HTTParty.get("#{@endpoint}/api/v1/locale/city?name=#{city}&state=#{state}&token=#{@token}", timeout: @timeout)
+        response = HTTParty.get(URI.encode("#{@endpoint}/api/v1/locale/city?name=#{city}&state=#{state}&token=#{@token}"), timeout: @timeout)
   
         response[0]["id"] unless response[0].nil?
+      rescue => e
+        nil
+      end
+    end
+
+    def self.weather_at_the_moment city_id
+      begin
+        HTTParty.get("#{@endpoint}/api/v1/weather/locale/#{city_id}/current?token=#{@token}", timeout: @timeout)       
       rescue
         nil
       end
     end
+
 
     def self.forecast_15_days city_id
       begin
